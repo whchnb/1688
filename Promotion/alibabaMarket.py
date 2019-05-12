@@ -38,7 +38,6 @@ class Alibaba(object):
         self.cookie = self.get_cookie(cookie_url, self.account)
         # 获取ua
         self.ua = self.get_ua()
-        # self.cookie = 'ali_apache_id=11.179.217.87.1557109662927.980741.2; t=0ec389e5303cc4ad299e6c6d2807925d; cna=n4lWFZbRW2YCAbe/sh4Lxj33; gangesweb-buckettest=183.191.178.30.1557109697018.0; UM_distinctid=16a8af9c7e322e-0f2c1ced40471a-e323069-15f900-16a8af9c7e4432; _bl_uid=Xkj0mv2UbkIqwqy6Opaw0tny0z6p; sc_g_cfg_f=sc_b_locale=en_US; c_csrf=8eed88a3-a58d-4ea8-84a4-19fb053ab305; cookie2=1c173ba0bf6bfe1fae7710896e8dabc1; v=0; _tb_token_=fe678b3d3b877; acs_usuc_t=acs_rt=df4c8c47f18144f5bcb2a2b6802c1e9e; intl_locale=zh_CN; _csrf_token=1557196020174; _ga=GA1.2.1933742769.1557196023; _gid=GA1.2.1349209298.1557196023; acs_rt=3b27dfd068c7401e960fed41c13bef46; ali_apache_tracktmp=W_signed=Y; xman_us_f=x_locale=zh_CN&x_l=1&last_popup_time=1557109691479&x_user=CN|Ady|Cao|cgs|229737297&no_popup_today=n; _hvn_login=4; CNZZDATA1261550731=1691166204-1557106643-%7C1557295846; csg=a7e1f71b; xman_us_t=ctoken=sc7zznmf5l6f&l_source=alibaba&x_user=PSSkNsnV9SvqLECDzba+Jc1mav3un55GS3kpun1GB7Y=&x_lid=jakcomtech&sign=y&need_popup=y; intl_common_forever=GaEcvzUktdTMm7qfKMm+QplOfxhj6DZi3U/DhDEM5XdJFcrt+N48Hg==; xman_f=maRhMRQ6Cf7GjYQRU/3Rrw4tAjlIBPaIHDM0DQrMZcQFKZcJr00zZsOX9/0B1Btv5GXi0gj65/LDSYTHLE3sln0ydcb8jemuT09K+Bmxznhs6ykUcd4FOmEPFS1toj0CqajaIGRP5mI7tDDyxz1cZgbYkD8ITitIcOY1t7nVITE/6HbXv6pWWq5MEXa42gsN9/yU6iLS079z/SHXm/viieZJJKd2WrueN/uSTMywGq39lHYyiTZo/jZCmx1Gk/UWh9NpoMQ0Oc3OWeoSYAoMnFw+lIYhLGsbIaYA+hPe5aWPe3aGwhx19noe+eaPziTrGXtoRm/7muSi92CmwsQ/VWmkogWX/3OlReZYsy3W+/roJt9a4EKbpafqTtstyHxx; ali_apache_track=ms=|mt=3|mid=jakcomtech; xman_t=rLmgOJS2fHog1OwjfsZB4BUf+JCTf9OiayW4nRIjOQnZZSfAx9RAxacio7lTMaCwX2mdBp6cECTJkOPoPSvS476ngXzfGvm9Dlgw6C9j72yjzQmtJEUSPZNrK+ZZyc0kw4pz14xm3Bspxdaaioz13uzE2shPGXjLAkyNO8wYayEuYPHUhhi1snEx5mbcaVRwNUhk75zsPyDbY3jlv0Qxa5DKuRZ1q2e2j1oGVhfEFdBuBKWA7tWMfqJJMKnhipBawCjqiCeT+CA/MQbii6d0TWQPWjjOzT/TK1UzB+5lMSQxeaFUNmw4NvvIzjDxDaVWA7GIlPwHCuk9rNoxGo9PwF0nZKjwhYo+SpDzLlvfwxl9steGu4bZsFZeQOKN7X+A/rNDEOeYMH6Y+GgrqQeTaYDoxogXBDUDSzfIMv1qBkyiLF8ovhU9q3ocf8HYJ7XYFjTmJTeZL7NpQAOEytQqE6syxWBuA3rnfm6tsRe1PxiiIWj6pLW29KBoUbQrsDkxAXV1OSK0MlxVHtx/EFndawTnoFfrtZy+afw+9SOHC1KsHta/S+TZawKcfS/2folAdyYchCXuuvTKJWgtvw3j3JpGCVWIRH0Ajwu4radrWrHTTxAJ5ftG7+UUMGyOsZRQ8f94ImdVUHEdM5EIkucsz8GYIerz6RQLLdPrk2Hlkw4S7HrjSMuK/Q==; l=bBI6KHolvDecmn5LBOCNSuI8LS79IIRAguPRwCbDi_5aK6Y_g_bOlKS9XFv6Vj5R_NTB4UaStk99-etks; isg=BKWlk1bLFXZpI3E3qhHzPiIotGEfSlj0KxbRgqeKYlzrvsUwbzNBR5tUTGJtvnEs'
         # 请求头
         self.headers = {
             'authority': 'data.alibaba.com',
@@ -77,8 +76,8 @@ class Alibaba(object):
         # 添加日志时间
         DATE_FORMAT = "%m/%d/%Y %H:%M:%S %p"
         # 设置日志内容
-        logging.basicConfig(filename='market.log', # 日志名称及位置
-                            level=logging.INFO,    # 设置日志级别
+        logging.basicConfig(filename='market.log',  # 日志名称及位置
+                            level=logging.INFO,  # 设置日志级别
                             format=LOG_FORMAT,
                             datefmt=DATE_FORMAT)
 
@@ -92,7 +91,6 @@ class Alibaba(object):
         username_re_complie = re.compile(r'"displayName":"(.*?\s.*?)\s', re.S)
         username = re.findall(username_re_complie, response.text)
         if len(username) == 0:
-            # logging.critical(str(response.text))
             username = ''
         else:
             username = username[0]
@@ -153,13 +151,16 @@ class Alibaba(object):
             ua = f.read().split('\n')
         return ua
 
-    def get_info(self, page=9, info_list=[]):
+    def get_info(self, page=1, info_list=[]):
         """
         获取蓝标用户
         :param page: 页数
         :return: 20个蓝标客户
         """
         # post 请求携带的参数
+        # 商户链接
+        info_url = 'https://hz-mydata.alibaba.com/self/.json?action=CommonAction&iName=getVisitors&isVip=true&0.656950193681427&ctoken={}&dmtrack_pageid=b7bfb21e0b0857fb5ccfeba816a8c31c32b1d20a17'.format(
+            self.token)
         data_dic = {
             'orderBy': 'staySecond',
             'orderModel': 'desc',
@@ -167,8 +168,10 @@ class Alibaba(object):
             'pageNO': page,
             'statisticsType': 'day',
             'selected': '0',
-            'startDate': self.last_week_start_dt,
-            'endDate': self.last_week_end_dt,
+            # 'startDate': self.last_week_start_dt,
+            # 'endDate': self.last_week_end_dt,
+            'startDate': '2019-05-03',
+            'endDate': '2019-05-09',
             'searchKeyword': '',
             'buyerRegion': '',
             'buyerCountry': '',
@@ -181,9 +184,6 @@ class Alibaba(object):
             'statisticType': 'os',
             'desTime': str(time.time()).replace('.', '')[:13]
         }
-        # 商户链接
-        info_url = 'https://hz-mydata.alibaba.com/self/.json?action=CommonAction&iName=getVisitors&isVip=true&0.656950193681427&ctoken={}&dmtrack_pageid=b7bfb21e0b0857fb5ccfeba816a8c31c32b1d20a17'.format(
-            self.token)
         info_response = requests.post(info_url, headers=self.headers, data=data_dic)
         # 获取到的数据为json数据，使用json.loads加载数据
         # print(info_response.text)
@@ -205,6 +205,7 @@ class Alibaba(object):
                 num = len(info_list)
                 print('共获取{}，已获取{}'.format(self.pruducts_num, num))
                 if num == self.pruducts_num:
+                    # print(info_list)
                     return info_list
         page += 1
         time.sleep(2)
@@ -212,23 +213,29 @@ class Alibaba(object):
 
     def customer_info(self, info_datas):
         for index, info_data in enumerate(info_datas):
-            print('客户ID为：{}'.format(info_data['visitorId']))
-            buyerMemberSeq = info_data['buyerMemberSeq']
-            statDate = info_data['statDate']
-            # 通过请求用户详情页获取umidToken 和csrf_token
-            umidToken, csrf_token = self.get_detail(statDate, buyerMemberSeq)
-            class_dict = self.get_class(csrf_token, self.token)
-            product_class = 'Hot sale'
-            class_id = class_dict[product_class]
-            print('推荐的分类为{}，id:{}'.format(product_class, class_id))
-            products_list, SKU_list = self.get_product_lists(class_id, self.token, csrf_token)
-            status = self.send_market(umidToken, csrf_token, info_data=info_data, products_list=products_list, SKU_list=SKU_list, index=index)
-            if status == False:
-                print("账号：{}   今日已完成营销任务".format(self.account))
-                break
-            # 设置频率，每5秒营销一次
-            time.sleep(5)
-            # break
+            try:
+                print('客户ID为：{}'.format(info_data['visitorId']))
+                buyerMemberSeq = info_data['buyerMemberSeq']
+                statDate = info_data['statDate']
+                # 通过请求用户详情页获取umidToken 和csrf_token
+                umidToken, csrf_token, refer_url = self.get_detail(statDate, buyerMemberSeq)
+                class_dict = self.get_class(csrf_token, self.token)
+                product_class = 'Hot sale'
+                # product_class = 'Smart Ring'
+                # print(class_dict)
+                # print(type(class_dict))
+                class_id = class_dict.get(product_class, 801661654)
+                print('推荐的分类为{}，id:{}'.format(product_class, class_id))
+                products_list, SKU_list = self.get_product_lists(class_id, self.token, csrf_token)
+                status = self.send_market(umidToken, csrf_token, info_data=info_data, products_list=products_list,
+                                          SKU_list=SKU_list, index=index, refer_url=refer_url)
+                if status == False:
+                    print("账号：{}   今日已完成营销任务".format(self.account))
+                    break
+                # 设置频率，每5秒营销一次
+                time.sleep(5)
+            except:
+                continue
 
     def get_detail(self, statDate, buyerMemberSeq):
         """
@@ -245,7 +252,7 @@ class Alibaba(object):
         umidToken = re.findall(umidToken_re_complie, response.text)[0]
         csrf_token_re_complie = re.compile(r"csrfTokenVal: '(.*?)',", re.S)
         csrf_token = re.findall(csrf_token_re_complie, response.text)[0]
-        return umidToken, csrf_token
+        return umidToken, csrf_token, response.url
 
     def get_class(self, csrf_token, token):
         """
@@ -296,6 +303,9 @@ class Alibaba(object):
         }
         response = requests.post(url, data=data, headers=self.headers)
         data = json.loads(response.text)['products']
+        # print('\n' * 2)
+        # print(data)
+        # print('\n' * 2)
         # 随机获取5个不重复商品的索引
         index = random.sample(range(len(data)), 5)
         # 初始化商品列表
@@ -304,28 +314,47 @@ class Alibaba(object):
         SKU_list = []
         # 遍历随机的5个商品索引
         for i in index:
+
             # 对应的商品
             product = data[i]
+            # if product['redModel'] != 'H1':
+            #     continue
             # 判断如果SKU 为N2 则将SKU 改为N2X
             product_name = product['redModel'] if product['redModel'] != 'N2' else 'N2X'
             # 发送营销所需要的商品数据
-            product_dic = {"quantity": "3000",  # 商品数量
-                           "unitPrice": price_dic[product_name]['fob_3000_usd'],  # 商品数量3000+ 所对应的价格
-                           "productName": product['subject'],  # 商品全名
-                           "productId": product['id'],  # 商品所对应的id
-                           "id": "",
-                           "imageUrl": product['absImageUrl'] + '_100x100.jpg',  # 商品图片链接
-                           "url": product['detailUrl'],  # 商品详情链接
-                           "source": "",
-                           "unit": "Piece(s)",
-                           "unitCode": "007"
-                           }
+            # print(product_name)
+            # print(price_dic[product_name])
+            try:
+                product_dic = {"quantity": "3000",  # 商品数量
+                               "unitPrice": price_dic[product_name]['fob_3000_usd'],  # 商品数量3000+ 所对应的价格
+                               "productName": product['subject'],  # 商品全名
+                               "productId": product['id'],  # 商品所对应的id
+                               "id": "",
+                               "imageUrl": product['absImageUrl'] + '_100x100.jpg',  # 商品图片链接
+                               "url": product['detailUrl'],  # 商品详情链接
+                               "source": "",
+                               "unit": "Piece(s)",
+                               "unitCode": "007"
+                               }
+            except KeyError as e:
+                print(e)
+                print(price_dic)
+                print(data[i])
+                print('name is ', product_name)
+                logging.ERROR('{} {} {} {}'.format(self.account, e, price_dic, product_name))
+                continue
+            # print('-' * 50)
+            # print(product_dic)
+            # print('-' * 50)
             # 将每个构造好的商品详情放入products_list 中
             products_list.append(product_dic)
             SKU_list.append(product['redModel'])
+        # print('-*' * 50)
+        # print(products_list)
+        # print('-*' * 50)
         return products_list, SKU_list
 
-    def send_market(self, umidToken, csrf_token, info_data, products_list, SKU_list, index):
+    def send_market(self, umidToken, csrf_token, info_data, products_list, SKU_list, index, refer_url):
         """
         发送营销
         :param umidToken: 对应的umidToken
@@ -338,16 +367,17 @@ class Alibaba(object):
         headers = {
             'authority': 'message.alibaba.com',
             'method': 'POST',
-            'path': '/msgsend/ajax/PostMarketingMessage.htm?ctoken=ongd08aql3ei&dmtrack_pageid=b7bfb21e0bb0746f5cd1342e16a9133d8e921250f7',
+            'path': '/msgsend/ajax/PostMarketingMessage.htm?ctoken={}&dmtrack_pageid=b7bfb21e0bb0746f5cd1342e16a9133d8e921250f7'.format(
+                self.token),
             'scheme': 'https',
             'accept': 'application/json, text/javascript, */*; q=0.01',
             'accept-encoding': 'gzip, deflate, br',
             'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8,en-US;q=0.7',
             'content-length': '3138',
-            'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+            # 'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
             'cookie': self.cookie,
             'origin': 'https://message.alibaba.com',
-            'referer': 'https://message.alibaba.com/message/leadsDetail.htm?products%3D%5B%5D%26buyers%3D%5B%7B%22secAccountId%22%3A%22ID1xV7pH7lFQCr9bt4-7svvcVwttJsVxQBc4DQeo6DEsNw*%22%2C%22statDate%22%3A%222019-05-05%22%7D%5D%26mloca%3DCONTACT_MKT_VISITORS_MYDATA',
+            'referer': refer_url,
             'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
             'x-requested-with': 'XMLHttpRequest',
         }
@@ -372,23 +402,28 @@ class Alibaba(object):
             "content": message,
             "subject": "Top and relative quotation recommended from {}".format(username),
         }
-        ua = self.ua[index + 10]
+        ua = self.ua[index]
         # 构造营销所需的FROM_DATA
         send_data = {
-            '_csrf_token_': csrf_token,
-            'postId': str(time.time()).replace('.', '')[:13],
-            'mloca': 'CONTACT_MKT_VISITORS_MYDATA',
-            'ua': ua,
-            '_csi_': self.csi,
-            'umidToken': umidToken,
-            'imagePassword': '',
-            'params': json.dumps(params)
+            "_csrf_token_": csrf_token,
+            "postId": str(time.time()).replace('.', '')[:13],
+            "mloca": "CONTACT_MKT_VISITORS_MYDATA",
+            # 'ua': self.cookie,
+            # "ua": "117#9SNKFO9lFQvK2s4ffgB9ncycTEIjjAfi/2sgBnFWkIu8ZmaF//49+QJjABDlZQCB8F0wUspJRTOk8WJBM3oCVLQGKq/SMkhwXRdBcWDRpY5gXP8EOOFO/ia7/IIFOadzH7iWCXmkGc2dHPFCRRFv9EVRAkop/LuhBY/I8bgcOwcnB5+oZbmt3EZCAkDp/Br9B0anIbMlOtI38z6ioQvlRdfRASGGZtrSDfxQjpgpOIfx8kjDmpCFzGAOKkypZS8UBEfDKQOGOBFRBzjumpvFOdfCASypmtdFB+fuAQIG/DjazU5Pmpb87uRqAwmEgXh6Ag1BTMEhinmLkSZg6WehJeLCwNQyWGQO6eVceMjCiOHnPz3A61PhICVRocSynl9XglXw1aPElN821kZN6/ehILVOwx3RBXao+dFLTKEi0LmnBkwghnRKVC8RoeAx0XtnVY2pTMEhiCmCBkZg6WPhIL8RoxQyiXtCI66pTIQhG9TyyrYXZYJfiM5ZpaMEwjOmARKJbftF0i4mQNm1YfGIA+p6yvNSP/kDY0EHYkv/XRisBcy9OAenxiqoHxUaIkIuHELvL8VMKQjSL48ncnIxoPVqBZoVKnQpvFA60h6G/NDzdIJAgTUWhZV1k01MnQJXoqzFRPk4thb+Q5jjwecUCtfPS+ye06MblVnqpvUj3lvChctS0oSGLUB378VEDwvDCq6PSqErH6hkQLDwEc07LSLCezL+rZytrfLr+uV+sjdA4t3VqTycoD7KmeUnMWycLFz/sQRa2zzoe3ybAHlZDO9cZCEOn4H6+zYJnymyHEmV0tX5d/01/oxDmj/ult1oNqgdI4e+2kIyF3armOEwP9WLAVCiM1lGZWJtnyWbImtOvOFkteMauprRCKINKGJPKwCLXcsJybKheixUNAh8mhjqCS9CicTunrq1167plEg9g+x4wF+3xbv1zcDxsGjGRwM9dpvAjCdP7Y1n//oySeWdA3bNxhGn/ew3g1gWZ0jrut1t16EFDhBl0e6jovTAn8PptZGQ8zZS0NiY3w8Ea6L2oRULFhqhnqu2MKzXC+hheEIFe3vfi4zSRg8dkm7soyrJ0GVXJYlKjtyvJMlWIPQb2S+W7AQqH9Q155x0x95JBz70erkrUettCWbeUj2Us9+Inpj9zwjepSZ5Jruxkynrg39258kM88ADDtY7LKBcdRC3Jk5XK5LiQNKckYTjNkRcNY6Ye8DP3jQ1FLYn7fGFm9mAgPkQK/hjnlD91P3fKDxnzIh0tfN5wBIX+/NC5hXmZqkzYRBS9MopFrGOlRV89N6k5/e42V4MVS5W6xOy+abTMt1CbQXcBIOQqU321SHLTIZUt8l6fxfq/i58obaC/1QdpKSU6hKvTGC5nz6QTUv3T+9Bb2TuMw7X+doiY014Uv5b4CQIgXY/lt0KKYaxfyqvcq5RaLYgeB+6eNl=",
+            "ua": ua,
+            "_csi_": self.csi,
+            "umidToken": umidToken,
+            "imagePassword": "",
+            "params": json.dumps(params)
         }
         url = 'https://message.alibaba.com/msgsend/ajax/PostMarketingMessage.htm?ctoken={}&dmtrack_pageid=b7bfb21e0b01563e5ccfe9e016a8c2acdd9a88cab0'.format(
             self.token)
         # '''
+        # print(send_data)
+        # data = urlencode(send_data)
         try:
             response = requests.post(url, headers=headers, data=send_data)
+            # print(response.text)
             status = json.loads(response.text)['code']
             messages = json.loads(response.text)['message']
         except requests.exceptions.SSLError  as e:
@@ -431,13 +466,13 @@ class Alibaba(object):
         )
         # 构造旺铺行为
         wp_behavior = []
-        wp_behavior = wp_behavior.append('Add to Inquiry Cart') if info_data['isAddInquiryCart'] == 1 else wp_behavior
-        wp_behavior = wp_behavior.append('点击start order') if info_data['isClickPlaceOrder'] == 1 else wp_behavior
-        wp_behavior = wp_behavior.append('发起TM 咨询') if info_data['isAtmFb'] == 1 else wp_behavior
-        wp_behavior = wp_behavior.append('访问home') if info_data['isVisitHomepage'] == 1 else wp_behavior
-        wp_behavior = wp_behavior.append('访问company profile') if info_data['isVisitProfilePage'] == 1 else wp_behavior
-        wp_behavior = wp_behavior.append('访问contacts') if info_data['isVisitContactPage'] == 1 else wp_behavior
-        wp_behavior = wp_behavior.append('已发起询盘') if info_data['isMcFb'] == 1 else wp_behavior
+        wp_behavior.append('Add to Inquiry Cart') if info_data['isAddInquiryCart'] == 1 else wp_behavior
+        wp_behavior.append('点击start order') if info_data['isClickPlaceOrder'] == 1 else wp_behavior
+        wp_behavior.append('发起TM 咨询') if info_data['isAtmFb'] == 1 else wp_behavior
+        wp_behavior.append('访问home') if info_data['isVisitHomepage'] == 1 else wp_behavior
+        wp_behavior.append('访问company profile') if info_data['isVisitProfilePage'] == 1 else wp_behavior
+        wp_behavior.append('访问contacts') if info_data['isVisitContactPage'] == 1 else wp_behavior
+        wp_behavior.append('已发起询盘') if info_data['isMcFb'] == 1 else wp_behavior
         # 构造需要提交的日志信息
         data = {
             "Createtime": info_data['market_time'],  # 营销时间
@@ -445,7 +480,7 @@ class Alibaba(object):
             "Clientname": info_data['visitorId'],  # 客户名
             "Views": info_data['visitPv'],  # 浏览次数
             "Staytime": info_data['staySecond'],  # 停留时长
-            "Wangpu": json.dumps(wp_behavior),  # 旺铺行为
+            "Wangpu": (wp_behavior),  # 旺铺行为
             "Website": website_behavior,  # 网站行为
             "SKU": json.dumps(SKU_list)  # 推荐SKU
         }
@@ -458,16 +493,16 @@ class Alibaba(object):
 if __name__ == '__main__':
     # 需要登陆的账户
     cookie_accounts = [
-        # 'fb1@jakcom.com',
+        'fb1@jakcom.com',
         'fb2@jakcom.com',
-        # 'fb3@jakcom.com',
-        # 'tx@jakcom.com',
+        'fb3@jakcom.com',
+        'tx@jakcom.com',
     ]
     for cookie_account in cookie_accounts:
         # 营销的数量
-        pruducts_num = 2
+        pruducts_num = 20
         alibaba = Alibaba(cookie_account, pruducts_num)
-        info_datas = alibaba.get_info()
+        info_datas = alibaba.get_info(info_list=[])
         alibaba.customer_info(info_datas)
         # 每个账号之间设置3分钟间隔
         time.sleep(180)
